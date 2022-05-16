@@ -1,0 +1,114 @@
+//1.     
+Write a program to demonstrate status of key on an
+Applet window such as KeyPressed, KeyReleased, KeyUp, KeyDown.
+
+package javapractise2;
+import java.awt.FlowLayout;
+import java.awt.Frame;
+import java.awt.Label;
+import java.awt.TextField;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+public class user2 implements KeyListener {
+	Frame jf;
+	Label l1,l2;
+	TextField field1;
+	String s;
+	user2(){
+		jf=new Frame("Handeling Event");
+		l1=new Label("Press any key");
+		l2=new Label();
+		field1=new TextField(20);
+		jf.setSize(360,200);
+		jf.setLayout(new FlowLayout());
+		jf.add(l1);
+		jf.add(field1);
+		jf.add(l2);
+		field1.addKeyListener(this);
+		jf.setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new user2();
+	}
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		s+="keyTyped";
+		l2.setText(s);
+		jf.setVisible(true);
+		s="";
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		s=""+e.getKeyCode()+"";
+		l2.setText(s);
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		s+="Key Released";
+		l2.setText(s);
+		jf.setVisible(true);
+		s="";
+	}
+
+}
+</details>
+
+//2.     
+Write a program to create a frame using AWT. Implement
+using MouseMotion event handling methods. Frame should become visible when the
+mouse enters it.
+
+3.     
+Develop a GUI which accepts the information regarding
+the marks for all the subjects of a student in the examination. Display the
+result for a student in a separate window.
+
+4.     
+Write a program to insert and retrieve the data from
+the” student” database using JDBC.
+
+5.     
+Write a program to test simple server and client for
+Socket Programming
+
+6.     
+Write a program to demonstrate the use of InetAddress
+class and its factory methods.
+
+7.     
+Write a simple JSP page to display a simple message”Hi”
+and user entered name (It may be a simple html page).
+
+8.     
+Write a simple JSP page to display a simple message”Welcome
+to PVG’s COET &GKPIOM” (It may be a simple html page).
+
+9.     
+Create a simple calculator application using servlet.
+
+
+10. 
+Write a program to create a frame using AWT. Implement
+using Mouse event handling methods. Frame should become visible when the mouse
+enters it.
+
+11. 
+Write a program to test simple server and client for
+Socket Programming to send user entered string to server
+
+12. 
+Write a program to insert and retrieve the data from
+the” student” database using JDBC.
+
+
+13. 
+Develop a GUI which accepts the two numbers from user and
+calculate factorial of numbers, addition, subtraction, multiplication, division.Display
+the result in a separate window.
